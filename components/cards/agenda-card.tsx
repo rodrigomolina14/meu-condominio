@@ -26,7 +26,7 @@ export function AgendaCard({ item, compact }: Props) {
   const Icon = type.icon
 
   return (
-    <div className="rounded-xl border bg-card p-4 space-y-2">
+    <div className="rounded-xl border bg-card p-4 space-y-3">
       <div className="flex items-start justify-between gap-2">
         <span className={cn(
           'inline-flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-full',

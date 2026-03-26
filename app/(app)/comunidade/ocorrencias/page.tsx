@@ -29,7 +29,7 @@ export default function OcorrenciasPage() {
             <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
               Em aberto
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {abertas.map(o => (
                 <Link key={o.id} href={`/comunidade/ocorrencias/${o.id}`}>
                   <OcorrenciaCard ocorrencia={o} />
@@ -44,7 +44,7 @@ export default function OcorrenciasPage() {
             <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
               Resolvidas
             </h2>
-            <div className="space-y-3 opacity-75">
+            <div className="space-y-4 opacity-75">
               {resolvidas.map(o => (
                 <Link key={o.id} href={`/comunidade/ocorrencias/${o.id}`}>
                   <OcorrenciaCard ocorrencia={o} />

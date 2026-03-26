@@ -33,13 +33,15 @@ export default function ComunidadePage() {
   ]
 
   return (
-    <div className="px-4 py-4 space-y-4">
-      <h1 className="text-xl font-bold">Comunidade</h1>
-      <p className="text-sm text-muted-foreground">
-        Participe ativamente do seu condomínio.
-      </p>
+    <div className="px-4 py-5 space-y-6">
+      <div>
+        <h1 className="text-xl font-bold">Comunidade</h1>
+        <p className="text-sm text-muted-foreground mt-1">
+          Participe ativamente do seu condomínio.
+        </p>
+      </div>
 
-      <div className="space-y-3">
+      <div className="space-y-4">
         {sections.map(section => {
           const Icon = section.icon
           return (

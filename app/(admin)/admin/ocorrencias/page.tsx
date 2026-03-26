@@ -54,7 +54,7 @@ export default function AdminOcorrenciasPage() {
         ))}
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-4">
         {filtered.map(o => (
           <button key={o.id} onClick={() => setSelected(o)} className="w-full text-left">
             <OcorrenciaCard ocorrencia={o} />
@@ -91,8 +91,8 @@ export default function AdminOcorrenciasPage() {
                   </div>
                 ))}
 
-                <div className="space-y-3 pt-2 border-t">
-                  <div className="space-y-1.5">
+                <div className="space-y-4 pt-3 border-t">
+                  <div className="space-y-2">
                     <p className="text-xs font-medium">Atualizar status</p>
                     <Select defaultValue={selected.status}>
                       <SelectTrigger className="text-sm">

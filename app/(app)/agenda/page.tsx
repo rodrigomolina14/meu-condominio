@@ -63,10 +63,10 @@ export default function AgendaPage() {
       {/* Grouped list */}
       {Object.entries(grouped).map(([monthKey, items]) => (
         <section key={monthKey}>
-          <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 capitalize">
+          <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4 capitalize">
             {monthLabel(monthKey)}
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {items.map(item => (
               <Link key={item.id} href={`/agenda/${item.id}`}>
                 <AgendaCard item={item} />

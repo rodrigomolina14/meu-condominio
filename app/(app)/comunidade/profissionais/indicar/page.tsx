@@ -43,13 +43,13 @@ export default function IndicarProfissionalPage() {
         <h1 className="font-semibold text-sm">Indicar Profissional</h1>
       </header>
 
-      <div className="px-4 py-5">
+      <div className="px-4 py-6">
         <p className="text-sm text-muted-foreground mb-6">
           Indique um profissional de confiança para a comunidade. Após análise, será publicado no diretório.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Nome *</Label>
             <Input
               placeholder="Nome completo ou empresa"
@@ -59,7 +59,7 @@ export default function IndicarProfissionalPage() {
             />
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Profissão *</Label>
             <Select value={form.category} onValueChange={v => v && setForm(f => ({ ...f, category: v }))}>
               <SelectTrigger>
@@ -73,7 +73,7 @@ export default function IndicarProfissionalPage() {
             </Select>
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Telefone *</Label>
             <Input
               type="tel"
@@ -84,7 +84,7 @@ export default function IndicarProfissionalPage() {
             />
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Descrição</Label>
             <Textarea
               placeholder="Descreva os serviços que ele oferece"
@@ -94,7 +94,7 @@ export default function IndicarProfissionalPage() {
             />
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Por que você indica?</Label>
             <Textarea
               placeholder="Conte sua experiência com este profissional"

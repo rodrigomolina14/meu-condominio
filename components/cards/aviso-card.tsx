@@ -35,7 +35,7 @@ export function AvisoCard({ aviso, compact }: Props) {
 
   return (
     <div className={cn(
-      'rounded-xl border bg-card p-4 space-y-2',
+      'rounded-xl border bg-card p-4 space-y-3',
       aviso.category === 'urgente' && 'border-danger/30'
     )}>
       <div className="flex items-start justify-between gap-2">

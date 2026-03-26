@@ -21,11 +21,11 @@ export default function InicioPage() {
     .slice(0, 3)
 
   return (
-    <div className="px-4 py-4 space-y-6">
+    <div className="px-4 py-5 space-y-8">
       {/* Hero Banner */}
       {nextEvent && (
         <Link href={`/agenda/${nextEvent.id}`}>
-          <div className="rounded-2xl bg-primary text-primary-foreground p-5 space-y-2 shadow-sm">
+          <div className="rounded-2xl bg-primary text-primary-foreground p-5 space-y-3 shadow-sm">
             <p className="text-xs font-medium text-white/70 uppercase tracking-wider flex items-center gap-1">
               <CalendarDays className="w-3.5 h-3.5" />
               Próximo na agenda
@@ -41,13 +41,13 @@ export default function InicioPage() {
 
       {/* Avisos e Notícias */}
       <section>
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-4">
           <h2 className="font-semibold text-base">Avisos e Notícias</h2>
           <Link href="/comunidade" className="text-xs text-primary flex items-center gap-0.5">
             Ver tudo <ChevronRight className="w-3.5 h-3.5" />
           </Link>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-4">
           {recentAvisos.slice(0, 5).map(aviso => (
             <AvisoCard key={aviso.id} aviso={aviso} />
           ))}
@@ -56,13 +56,13 @@ export default function InicioPage() {
 
       {/* Próximos na Agenda */}
       <section>
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-4">
           <h2 className="font-semibold text-base">Próximos na Agenda</h2>
           <Link href="/agenda" className="text-xs text-primary flex items-center gap-0.5">
             Ver tudo <ChevronRight className="w-3.5 h-3.5" />
           </Link>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-4">
           {nextAgenda.map(item => (
             <Link key={item.id} href={`/agenda/${item.id}`}>
               <AgendaCard item={item} compact />

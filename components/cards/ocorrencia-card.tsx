@@ -25,7 +25,7 @@ export function OcorrenciaCard({ ocorrencia }: Props) {
   const status = statusConfig[ocorrencia.status]
 
   return (
-    <div className="rounded-xl border bg-card p-4 space-y-2">
+    <div className="rounded-xl border bg-card p-4 space-y-3">
       <div className="flex items-start justify-between gap-2">
         <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
           {categoryLabels[ocorrencia.category]}

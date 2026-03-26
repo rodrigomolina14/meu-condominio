@@ -21,10 +21,10 @@ export default function EnquetesPage() {
           <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
             Abertas
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {abertas.map(e => (
               <Link key={e.id} href={`/comunidade/enquetes/${e.id}`}>
-                <div className="rounded-xl border bg-card p-4 space-y-2 border-primary/20 hover:border-primary/50 transition-colors">
+                <div className="rounded-xl border bg-card p-4 space-y-3 border-primary/20 hover:border-primary/50 transition-colors">
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">
                       Aberta
@@ -49,10 +49,10 @@ export default function EnquetesPage() {
           <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
             Encerradas
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {encerradas.map(e => (
               <Link key={e.id} href={`/comunidade/enquetes/${e.id}`}>
-                <div className="rounded-xl border bg-card p-4 space-y-2 opacity-75 hover:opacity-100 transition-opacity">
+                <div className="rounded-xl border bg-card p-4 space-y-3 opacity-75 hover:opacity-100 transition-opacity">
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-xs bg-muted text-muted-foreground px-2 py-0.5 rounded-full font-medium">
                       Encerrada

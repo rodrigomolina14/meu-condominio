@@ -53,9 +53,9 @@ export default function NovaOcorrenciaPage() {
         <h1 className="font-semibold text-sm">Nova Ocorrência</h1>
       </header>
 
-      <div className="px-4 py-5">
+      <div className="px-4 py-6">
         <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Título *</Label>
             <Input
               placeholder="Descreva brevemente o problema"
@@ -65,7 +65,7 @@ export default function NovaOcorrenciaPage() {
             />
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Categoria *</Label>
             <Select
               value={form.category}
@@ -82,7 +82,7 @@ export default function NovaOcorrenciaPage() {
             </Select>
           </div>
 
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Descrição *</Label>
             <Textarea
               placeholder="Descreva o problema com detalhes: local, horário, frequência..."
@@ -94,7 +94,7 @@ export default function NovaOcorrenciaPage() {
           </div>
 
           {/* Foto mock */}
-          <div className="space-y-1.5">
+          <div className="space-y-2">
             <Label className="text-sm font-medium">Foto (opcional)</Label>
             <button
               type="button"

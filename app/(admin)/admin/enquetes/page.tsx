@@ -46,16 +46,16 @@ export default function AdminEnquetesPage() {
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="max-w-sm mx-auto max-h-[90vh] overflow-y-auto">
             <DialogHeader><DialogTitle>Nova Enquete</DialogTitle></DialogHeader>
-            <form onSubmit={handleSubmit} className="space-y-4 mt-2">
-              <div className="space-y-1.5">
+            <form onSubmit={handleSubmit} className="space-y-5 mt-4">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Pergunta *</Label>
                 <Input value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} required />
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Descrição</Label>
                 <Textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} className="resize-none min-h-[60px]" />
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Prazo</Label>
                 <Input type="date" value={form.endsAt} onChange={e => setForm(f => ({ ...f, endsAt: e.target.value }))} />
               </div>

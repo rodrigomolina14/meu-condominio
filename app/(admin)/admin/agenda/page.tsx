@@ -41,8 +41,8 @@ export default function AdminAgendaPage() {
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="max-w-sm mx-auto">
             <DialogHeader><DialogTitle>Novo Item na Agenda</DialogTitle></DialogHeader>
-            <form onSubmit={handleSubmit} className="space-y-4 mt-2">
-              <div className="space-y-1.5">
+            <form onSubmit={handleSubmit} className="space-y-5 mt-4">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Tipo</Label>
                 <Select value={form.type} onValueChange={v => v && setForm(f => ({ ...f, type: v as AgendaType }))}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
@@ -53,25 +53,25 @@ export default function AdminAgendaPage() {
                   </SelectContent>
                 </Select>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Título *</Label>
                 <Input value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} required />
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="space-y-1.5">
+                <div className="space-y-2">
                   <Label className="text-sm font-medium">Data *</Label>
                   <Input type="date" value={form.date} onChange={e => setForm(f => ({ ...f, date: e.target.value }))} required />
                 </div>
-                <div className="space-y-1.5">
+                <div className="space-y-2">
                   <Label className="text-sm font-medium">Hora *</Label>
                   <Input type="time" value={form.time} onChange={e => setForm(f => ({ ...f, time: e.target.value }))} required />
                 </div>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Local</Label>
                 <Input value={form.location} onChange={e => setForm(f => ({ ...f, location: e.target.value }))} />
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Descrição</Label>
                 <Textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} className="resize-none min-h-[80px]" />
               </div>
@@ -84,7 +84,7 @@ export default function AdminAgendaPage() {
         </Dialog>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-4">
         {sorted.map(item => <AgendaCard key={item.id} item={item} />)}
       </div>
     </div>

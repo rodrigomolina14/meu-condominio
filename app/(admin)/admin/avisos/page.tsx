@@ -57,8 +57,8 @@ export default function AdminAvisosPage() {
             <DialogHeader>
               <DialogTitle>Novo Aviso</DialogTitle>
             </DialogHeader>
-            <form onSubmit={handleSubmit} className="space-y-4 mt-2">
-              <div className="space-y-1.5">
+            <form onSubmit={handleSubmit} className="space-y-5 mt-4">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Categoria</Label>
                 <Select value={form.category} onValueChange={v => v && setForm(f => ({ ...f, category: v as AvisoCategory }))}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
@@ -69,11 +69,11 @@ export default function AdminAvisosPage() {
                   </SelectContent>
                 </Select>
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Título *</Label>
                 <Input value={form.title} onChange={e => setForm(f => ({ ...f, title: e.target.value }))} required />
               </div>
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <Label className="text-sm font-medium">Conteúdo *</Label>
                 <Textarea
                   value={form.body}
@@ -91,7 +91,7 @@ export default function AdminAvisosPage() {
         </Dialog>
       </div>
 
-      <div className="space-y-3">
+      <div className="space-y-4">
         {[...avisos].sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).map(aviso => (
           <div key={aviso.id} className="rounded-xl border bg-card p-4 space-y-2">
             <div className="flex items-start justify-between gap-2">
