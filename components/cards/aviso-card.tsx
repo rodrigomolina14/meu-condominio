@@ -35,19 +35,19 @@ export function AvisoCard({ aviso, compact }: Props) {
 
   return (
     <div className={cn(
-      'rounded-xl border bg-card p-4 space-y-3',
-      aviso.category === 'urgente' && 'border-danger/30'
+      'rounded-xl bg-card border border-l-4 p-4',
+      aviso.category === 'urgente' && 'border-l-danger',
+      aviso.category === 'aviso' && 'border-l-warning',
+      aviso.category === 'noticia' && 'border-l-primary',
     )}>
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <span className={cn(
-            'inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full border',
-            config.className
-          )}>
-            <Icon className="w-3 h-3" />
-            {config.label}
-          </span>
-        </div>
+      <div className="flex items-center justify-between gap-2 mb-2.5">
+        <span className={cn(
+          'inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full border',
+          config.className
+        )}>
+          <Icon className="w-3 h-3" />
+          {config.label}
+        </span>
         <span className="text-xs text-muted-foreground shrink-0">
           {timeAgo(aviso.createdAt)}
         </span>
@@ -56,10 +56,11 @@ export function AvisoCard({ aviso, compact }: Props) {
       <h3 className="font-semibold text-sm leading-snug">{aviso.title}</h3>
 
       {!compact && (
-        <p className="text-sm text-muted-foreground line-clamp-3">{aviso.body}</p>
+        <>
+          <p className="text-sm text-muted-foreground line-clamp-2 mt-2">{aviso.body}</p>
+          <p className="text-xs text-muted-foreground mt-2">{aviso.author}</p>
+        </>
       )}
-
-      <p className="text-xs text-muted-foreground">{aviso.author}</p>
     </div>
   )
 }
